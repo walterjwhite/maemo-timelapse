@@ -1,0 +1,13 @@
+Source: timelapse
+Section: unknown
+Priority: extra
+Maintainer: unknown <searapaixao@gmail.com>
+Build-Depends: debhelper (>= 5)
+Standards-Version: 3.7.3
+Homepage: <insert the upstream URL, if relevant>
+
+Package: timelapse
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: <insert up to 60 chars description>
+ <insert long description, indented with spaces>

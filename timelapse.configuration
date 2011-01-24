@@ -1,0 +1,13 @@
+#	date to start taking pictures
+start.date=2011/01/29
+#	date to stop taking pictures (if the application is still running at this point ...)
+end.date=2011/02/05
+
+#	6 am is before sunrise and would capture the luminosity change
+day.start=0600
+#	8 pm will capture the sunset as well as the drive
+day.end=2000
+
+#	defaults for each day ...
+day.interval=1s
+night.interval=10s

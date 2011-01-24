@@ -1,0 +1,13 @@
+755 root root . usr  /
+755 root root . usr/bin  /
+755 root root . usr/bin/timelapse  debian/timelapse/usr/bin/timelapse
+755 root root . usr/sbin  /
+755 root root . usr/share  /
+755 root root . usr/share/applications  /
+755 root root . usr/share/applications/hildon  /
+644 root root . usr/share/applications/hildon/timelapse.desktop debian/timelapse/usr/share/applications/hildon/timelapse.desktop
+755 root root . usr/share/doc  /
+755 root root . usr/share/doc/timelapse  /
+644 root root . usr/share/doc/timelapse/changelog.Debian.gz debian/timelapse/usr/share/doc/timelapse/changelog.Debian.gz
+644 root root . usr/share/doc/timelapse/copyright debian/timelapse/usr/share/doc/timelapse/copyright
+644 root root . usr/share/doc/timelapse/README.Debian debian/timelapse/usr/share/doc/timelapse/README.Debian
