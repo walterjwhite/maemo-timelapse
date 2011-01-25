@@ -117,10 +117,10 @@ void FCamera::takePicture()
 
 void FCamera::sleep()
 {
-    timespec sleepTime = {0, SLEEP_TIME};
-    timespec remainder = {0, 0};
+    timespec sleepTimeSpec = {sleepTime.quot, sleepTime.rem};
+    timespec remainderTimeSpec = {0, 0};
 
-    sleep(sleepTime, remainder);
+    sleep(sleepTimeSpec, remainderTimeSpec);
 }
 
 void FCamera::expose()

@@ -25,17 +25,20 @@
 #define NIGHT_INTERVAL 10
 
 #define MAXIMUM_EXPOSURE_PERCENTAGE 0.25
+#define MAXIMUM_SLEEP_PERCENTAGE 0.50
+
 #define MAXIMUM_GAIN 4.0f
 
 // sleep time in nanoseconds
-// sleep for 1 ms
-#define SLEEP_TIME MAXIMUM_EXPOSURE_PERCENTAGE*NANOSECONDS
+// sleep for 50% of interval (0.5 seconds -> 5 seconds)
+#define SLEEP_TIME MAXIMUM_SLEEP_PERCENTAGE*NANOSECONDS
 
 #define MAXIMUM_DAY_EXPOSURE DAY_INTERVAL*MAXIMUM_EXPOSURE_PERCENTAGE*NANOSECONDS
 #define MAXIMUM_NIGHT_EXPOSURE NIGHT_INTERVAL*MAXIMUM_EXPOSURE_PERCENTAGE*NANOSECONDS
 #define DATE_FORMAT "%Y-%m-%d %H:%M:%S"
 
 #include <stdio.h>
+#include <cstdlib>
 #include <ctime>
 #include <time.h>
 #include <stdarg.h>
@@ -62,6 +65,8 @@ class FCamera {
 
         previousTime = 0;
         currentTime = 0;
+
+        sleepTime = div(SLEEP_TIME, NANOSECONDS);
     }
 
     /**
@@ -252,6 +257,8 @@ class FCamera {
         }
 
   private:
+        div_t sleepTime;
+
         // day or night
         bool day;
         // interval between capturing frames
