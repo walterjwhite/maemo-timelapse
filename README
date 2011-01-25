@@ -1,0 +1,20 @@
+This project is designed to be a very custom timelapse application.
+
+Design / Purpose
+-	capture pictures during road trip
+-	alternate between fast/slow intervals (day/night)
+-	be hands free
+	-	external
+		-	transfer files via rsync / ssh
+
+
+Long-term goals (to determine)
+-	make time lapse photography simpler
+	-	no need for expensive intervalometer
+	-	use existing technology (n900)
+	
+
+While I would like to make an application that is flexible and not need 
+re-compiled, I am thinking that this may turn into a library / extension 
+/ framework so that for custom functionality (when to take pictures, 
+when to stop, the algorithms can be implemented there.

@@ -3,7 +3,7 @@
 
 #include "FCamera.h"
 
-#define STORAGE_PATTERN "/home/user/MyDocs/DCIM/%Y-%m-%d_%H.%M.%S.jpeg"
+#define STORAGE_PATTERN "/media/mmc1/timelapse/%Y-%m-%d_%H.%M.%S.jpeg"
 
 int main(int argumentCount, char* argument[]) {
 
