@@ -45,14 +45,9 @@ void FCamera::takePictures()
 
 void FCamera::adjust()
 {
-    //if(!deleted)
-        //delete frame;
-
     sensor.capture(shot);
     frame = sensor.getFrame();
     expose();
-
-    //deleted = false;
 }
 
 bool FCamera::keepTakingPictures()
@@ -158,9 +153,4 @@ void FCamera::save()
     log(Trace, this, "saving file to:%s %d-%d\n", path, &shot, &frame);
     log(Trace, this, "image dimensions:%d-%d", shot.image.width(), shot.image.height());
     FCam::saveJPEG(frame, path);
-
-    // free up memory
-    //delete frame;
-
-    //deleted = true;
 }

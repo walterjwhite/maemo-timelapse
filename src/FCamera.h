@@ -55,15 +55,13 @@ class FCamera {
 
         shot.exposure = MAXIMUM_DAY_EXPOSURE;
         shot.gain = MAXIMUM_GAIN;
-        shot.image = FCam::Image(FRAME_WIDTH, FRAME_HEIGHT, FCam::UYVY);
+        shot.image = FCam::Image(FRAME_WIDTH, FRAME_HEIGHT, FCam::UYVY, FCam::Image::AutoAllocate);
 
         shot.histogram.enabled = true;
         shot.histogram.region = FCam::Rect(0,0,FRAME_WIDTH,FRAME_HEIGHT);
 
         previousTime = 0;
         currentTime = 0;
-
-        deleted = true;
     }
 
     /**
@@ -254,9 +252,6 @@ class FCamera {
         }
 
   private:
-        // is the frame null?
-        bool deleted;
-
         // day or night
         bool day;
         // interval between capturing frames
