@@ -31,8 +31,10 @@ void FCamera::takePictures()
 {
     while(keepTakingPictures())
     {
+        adjust();
+        // limit how frequently we do activity ...
         if(!isTakePicture())
-            adjust();
+            sleep();
         else
             takePicture();
 
