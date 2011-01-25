@@ -134,7 +134,7 @@ void FCamera::expose()
     autoWhiteBalance(&shot, frame);
 }
 
-long FCamera::getMaximumExposureTime()
+double FCamera::getMaximumExposureTime()
 {
     if(day)
         return(MAXIMUM_DAY_EXPOSURE);

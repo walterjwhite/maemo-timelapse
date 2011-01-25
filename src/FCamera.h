@@ -21,8 +21,8 @@
 #define MICROSECONDS 1000*MILLISECONDS
 #define NANOSECONDS 1000*MICROSECONDS
 
-#define DAY_INTERVAL 1
-#define NIGHT_INTERVAL 10
+#define DAY_INTERVAL 2
+#define NIGHT_INTERVAL 30
 
 #define MAXIMUM_EXPOSURE_PERCENTAGE 0.25
 #define MAXIMUM_SLEEP_PERCENTAGE 0.50
@@ -100,7 +100,7 @@ class FCamera {
         /**
          * Get the maximum exposure time (varies depending on the time of day, at night, we are assuming we're not moving so we can use a longer exposure).
          */
-        long getMaximumExposureTime();
+        double getMaximumExposureTime();
         /**
          * Adjust the exposure and white balance.
          */
@@ -262,7 +262,7 @@ class FCamera {
         // day or night
         bool day;
         // interval between capturing frames
-        int interval;
+        double interval;
         // did we just switch from day to night?
         bool stateChange;
 
